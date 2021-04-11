@@ -259,4 +259,9 @@ Algumas informações úteis e dicas:
    right:0;
    bottom:0;
  }
+
+ .card-tag{
+  font-family: 'Roboto', sans-serif;
+  font-size: auto;
+ }
  

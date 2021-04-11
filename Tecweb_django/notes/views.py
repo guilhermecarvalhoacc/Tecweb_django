@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from .models import Note
 
 
-def add(title,content):
-    note_obj = Note(title = title, content= content)
+def add(title,content,tag):
+    note_obj = Note(title = title, content= content,tag = tag)
     note_obj.save()
 
 
@@ -12,10 +12,11 @@ def index(request):
         title = request.POST.get('titulo')
         content = request.POST.get('detalhes')
         ID = request.POST.get("Id")
-        print(title,"\n",content,"\n",ID)
+        tag = request.POST.get("tag")
+        print(title,"\n",content,"\n",ID, "\n",tag)
         # TAREFA: Utilize o title e content para criar um novo Note no banco de dados
         if ID == "":
-            add(title,content)
+            add(title,content,tag)
         else:
             if title == None:
                 Note.objects.filter(id=ID).delete()
