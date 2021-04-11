@@ -31,3 +31,7 @@ def index(request):
     else:
         all_notes = Note.objects.all()
         return render(request, 'notes/index.html', {'notes': all_notes})
+
+def tags(request):
+    all_notes = Note.objects.all()
+    return render(request, 'notes/tags.html', {'notes': all_notes})
