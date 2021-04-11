@@ -263,5 +263,9 @@ Algumas informações úteis e dicas:
  .card-tag{
   font-family: 'Roboto', sans-serif;
   font-size: auto;
+  position: relative;
+  left: 70%;
+  bottom: 65%;
+  font-size: 0.75rem;
  }
  
