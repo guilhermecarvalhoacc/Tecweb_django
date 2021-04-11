@@ -15,8 +15,11 @@
     <label class="form-card-title" for="titulo">Título</label>
     <input id="titulo" type="text" name="titulo" />
     <label class="autoresize" for="detalhes">Detalhes</label>
-    <textarea id="detalhes" name="detalhes"></textarea>
+    <input id="tag" type="text" name="detalhes" />
+    <label class="autoresize" for="tag">Tag</label>
+    <textarea id="detalhes" name="tag"></textarea>
     <input class="btn"  type="submit" />
+
   </form>
   <div class="card-container">
     {% for note in notes %}
@@ -32,6 +35,7 @@
       </a>
       <h3 class="card-title" name="title-{{note.id}}" >{{ note.title }}</h3>
       <h3 class="card-content" name="content-{{note.id}}" >{{ note.content}}</h3>
+      <h3 class="card-content" name="content-{{note.id}}" >{{ note.tag}}</h3>
       </div>
       {% endfor %}
     </div>
