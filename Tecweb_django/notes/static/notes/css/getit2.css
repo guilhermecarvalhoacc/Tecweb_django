@@ -33,6 +33,7 @@ Algumas informações úteis e dicas:
  .appbar {
    background-color: #f7d736;	
    display: flex;
+   flex-direction: column;
    flex-direction: row;
    align-content: center;
    box-shadow: 0 1px 24px 0 rgba(0, 0, 0, 0.75);
@@ -269,7 +270,16 @@ Algumas informações úteis e dicas:
   font-size: 0.75rem;
  }
  
- .container-link{
-   position: absolute;
-   top: 60;
- }
+.botao_tag{
+  position: relative;
+  right: 300%;
+  bottom: -80%;
+}
+
+.titulo_pagina{
+  position: relative;
+  left: 0%;
+  bottom: 30%;
+  font-size: auto;
+
+}
