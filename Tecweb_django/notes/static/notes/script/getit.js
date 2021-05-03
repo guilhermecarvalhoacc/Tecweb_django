@@ -3,8 +3,10 @@ function editar_card(Id){
   document.getElementsByName('Id')[0].value = Id
   titulo = document.getElementsByName("title-"+ Id)[0].innerText
   detalhes = document.getElementsByName("content-"+Id)[0].innerText
+  tags = document.getElementsByName("tag-"+Id)[0].innerText
   document.getElementsByName('titulo')[0].value = titulo
   document.getElementsByName('detalhes')[0].value = detalhes
+  document.getElementsByName('tag')[0].value = tags
   console.log(Id)
 }
 
