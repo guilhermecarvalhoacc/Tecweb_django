@@ -25,6 +25,7 @@ def index(request):
                 edition = Note.objects.get(id=ID)
                 edition.title = title
                 edition.content = content
+                edition.tag = tag
                 edition.save()
         return redirect('index')
     
@@ -32,6 +33,12 @@ def index(request):
         all_notes = Note.objects.all()
         return render(request, 'notes/index.html', {'notes': all_notes})
 
-def tags(request):
-    all_notes = Note.objects.all()
-    return render(request, 'notes/tags.html', {'notes': all_notes})
+def listatags(request):
+    all_tags = Note.objects.values("tag").distinct()
+    print(f"todas as tags: {all_tags}")
+
+    listatags = [ i["tag"] for i in all_tags]
+    print(listatags)
+    return render(request, "notes/listatags.html", {"tags":listatags} )
+
+
